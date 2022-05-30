@@ -1,3 +1,4 @@
 #!/bin/bash
 python PYFILE
+chmod u+x PYFILE
 
