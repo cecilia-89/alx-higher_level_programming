@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x PYCODE
+chmod u+x $PYCODE
