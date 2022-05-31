@@ -2,4 +2,5 @@
 def magic_calculation(a, b)
 
 
-return len(a + b)
+sum = a + b
+return sum
