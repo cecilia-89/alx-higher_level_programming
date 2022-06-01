@@ -12,10 +12,7 @@ def uppercase(str):
 
             element = chr(num)
 
-        print(element, end='')
+        print("{}".format(element), end='')
 
     print(sep='')
 
-
-uppercase("best")
-uppercase("Best School 98 Battery street")
