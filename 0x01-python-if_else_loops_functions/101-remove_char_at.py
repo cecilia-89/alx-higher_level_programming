@@ -10,6 +10,4 @@ def remove_char_at(str, n):
 
         str = ''.join(str_list)
 
-        str.strip
-
     return str
