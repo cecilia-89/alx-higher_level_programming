@@ -6,7 +6,7 @@ def remove_char_at(str, n):
 
         str_list = list(str)
 
-        str_list[n] = ' '
+        str_list[n] = '\0'
 
         str = ''.join(str_list)
 
