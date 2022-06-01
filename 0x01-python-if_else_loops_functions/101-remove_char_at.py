@@ -6,10 +6,8 @@ def remove_char_at(str, n):
 
         str_list = list(str)
 
-        str_list[n] = ''
+        str_list[n] = ' '
 
         str = ''.join(str_list)
-
-        print('\n')
 
     return str
