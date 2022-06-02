@@ -2,12 +2,14 @@
 
 import sys
 
-arglen = len(sys.argv)
+if __name__ == '__main__':
 
-result = 0
+    arglen = len(sys.argv)
 
-for i in range(1, arglen):
+    result = 0
 
-    result += int(sys.argv[i])
+    for i in range(1, arglen):
 
-print(result)
+        result += int(sys.argv[i])
+
+    print(result)
