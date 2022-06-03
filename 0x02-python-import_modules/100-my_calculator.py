@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     arg = sys.argv
 
-    ops = {'+' : add, '-' : sub, '/' : div, '*' : mul}
+    ops = {'+': add, '-': sub, '/': div, '*': mul}
 
     if len(arg) != 4:
 
@@ -23,5 +23,4 @@ if __name__ == "__main__":
     a = int(arg[1])
     b = int(arg[3])
 
-    
     print("{} {} {} = {}".format(a, arg[2], b, ops[arg[2]](a, b)))
