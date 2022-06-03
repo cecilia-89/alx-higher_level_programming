@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     arg = sys.argv
 
-    ops = {'+': add, '-':sub, '/':div, '*':mul}
+    ops = {'+' : add, '-' : sub, '/' : div, '*' : mul}
 
     if len(arg) != 4:
 
