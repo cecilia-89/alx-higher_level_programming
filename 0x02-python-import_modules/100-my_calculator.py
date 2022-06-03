@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     operators = ['+', '-', '/', '*']
 
-    if len(arg) < 3:
+    if len(arg) != 3:
 
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
@@ -24,13 +24,13 @@ if __name__ == "__main__":
     b = int(arg[3])
 
     if arg[2] == '+':
-        print("{} {} {} = {}".format(arg[1], arg[2], arg[3], add(a, b)))
+        print("{} {} {} = {}".format(a, arg[2], b, add(a, b)))
 
     elif arg[2] == '-':
-        print("{} {} {} = {}".format(arg[1], arg[2], arg[3], sub(a, b)))
+        print("{} {} {} = {}".format(a, arg[2], b, sub(a, b)))
 
     elif arg[2] == '/':
-        print("{} {} {} = {}".format(arg[1], arg[2], arg[3], div(a, b)))
+        print("{} {} {} = {}".format(a, arg[2], b, div(a, b)))
 
     else:
-        print("{} {} {} = {}".format(arg[1], arg[2], arg[3], mul(a, b)))
+        print("{} {} {} = {}".format(a, arg[2], b, mul(a, b)))
