@@ -8,14 +8,14 @@ if __name__ == "__main__":
 
     arg = sys.argv
 
-    operators = ['+', '-', '/', '*']
+    ops = {'+': add, '-':sub, '/':div, '*':mul}
 
-    if len(arg) < 3:
+    if len(arg) != 4:
 
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
 
-    if arg[2] not in operators:
+    if arg[2] not in ops.keys():
 
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
@@ -23,14 +23,5 @@ if __name__ == "__main__":
     a = int(arg[1])
     b = int(arg[3])
 
-    if arg[2] == '+':
-        print("{} {} {} = {}".format(a, arg[2], b, add(a, b)))
-
-    elif arg[2] == '-':
-        print("{} {} {} = {}".format(a, arg[2], b, sub(a, b)))
-
-    elif arg[2] == '/':
-        print("{} {} {} = {}".format(a, arg[2], b, div(a, b)))
-
-    else:
-        print("{} {} {} = {}".format(a, arg[2], b, mul(a, b)))
+    
+    print("{} {} {} = {}".format(a, arg[2], b, ops[arg[2]](a, b)))
