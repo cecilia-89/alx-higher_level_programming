@@ -8,8 +8,6 @@ def print_matrix_integer(matrix=[[]]):
 
             for idx in lst:
 
-                if idx:
-
                     print("{:d}".format(idx), end=' ')
 
             print()
