@@ -2,10 +2,12 @@
 
 def print_matrix_integer(matrix=[[]]):
 
-    if matrix != None:
+    if matrix:
+
         for lst in matrix:
 
-            for idx in lst:
-                 print("{:d}".format(idx), end=' ')
+            if lst:
+                for idx in lst:
+                    print("{:d}".format(idx), end=' ')
 
-            print()
+                print()
