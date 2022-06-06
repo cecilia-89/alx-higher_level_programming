@@ -5,8 +5,11 @@ def print_matrix_integer(matrix=[[]]):
     if matrix:
 
         for lst in matrix:
-            for idx in lst:
 
-                print("{:d}".format(idx), end=' ')
+            for count, idx in enumerate(lst):
+
+                if count != 3:
+
+                    print("{:d}".format(idx), end=' ')
 
             print()
