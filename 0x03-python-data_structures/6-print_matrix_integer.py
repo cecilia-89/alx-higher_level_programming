@@ -6,9 +6,10 @@ def print_matrix_integer(matrix=[[]]):
 
         for count, idx in enumerate(lst):
 
-            if count == len(lst):
+            if count == len(lst) - 1:
                 print("{:d}".format(idx), end='')
 
-            print("{:d}".format(idx), end=' ')
+            else:
+                print("{:d}".format(idx), end=' ')
 
         print()
