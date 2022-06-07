@@ -2,12 +2,13 @@
 
 def print_matrix_integer(matrix=[[]]):
 
-    if matrix:
+    for lst in matrix:
 
-        for lst in matrix:
+        for count, idx in enumerate(lst):
 
-            for idx in lst:
+            if count == len(lst):
+                print("{:d}".format(idx), end='')
 
-                    print("{:d}".format(idx), end=' ')
+            print("{:d}".format(idx), end=' ')
 
-            print()
+        print()
