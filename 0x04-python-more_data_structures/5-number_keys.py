@@ -2,9 +2,4 @@
 
 def number_keys(a_dictionary):
 
-    if a_dictionary:
-
-        for count, keys in enumerate(a_dictionary.keys()):
-            pass
-
-        return count + 1
+    return len(a_dictionary)
