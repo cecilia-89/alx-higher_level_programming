@@ -3,7 +3,7 @@
 """
 roman_to_int = __import__('12-roman_to_int').roman_to_int
 
-roman_number = "X"
+roman_number = 12
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = "VII"
@@ -12,7 +12,7 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 roman_number = "IX"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-roman_number = "LXXXVII"
+roman_number = None
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = "DCCVII"
