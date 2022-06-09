@@ -2,7 +2,6 @@
 
 def search_replace(my_list, search, replace):
 
-
     new_list = []
 
     for idx in my_list:
