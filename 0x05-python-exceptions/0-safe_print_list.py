@@ -2,16 +2,16 @@
 
 def safe_print_list(my_list=[], x=0):
 
-    for count, ele in enumerate(my_list):
+    count = 0
+
+    for i in range(x):
 
         try:
-            print(ele, end='')
+            print(my_list[i], end='')
+            count += 1
 
-        except:
-            print()
-
-        if count + 1 == x:
-            break
+        except Exception as ex:
+            pass
 
     print()
-    return count + 1
+    return count
