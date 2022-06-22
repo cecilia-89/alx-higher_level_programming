@@ -41,11 +41,9 @@ class Square:
 
         if self.__size == 0:
 
-            pass
+            print()
 
         else:
 
             print("\n".join(["#" * self.__size for rows
                              in range(self.__size)]))
-
-        print('')
