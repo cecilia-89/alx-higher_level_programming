@@ -45,6 +45,7 @@ class Square:
 
         else:
 
-            print("\n".join(["#" * self.__size for rows in range(self.__size)]))
+            print("\n".join(["#" * self.__size for rows
+                             in range(self.__size)]))
 
-        print()
+        print('')
