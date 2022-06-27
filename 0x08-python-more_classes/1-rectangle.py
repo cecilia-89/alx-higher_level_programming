@@ -27,7 +27,7 @@ class Rectangle:
 
         """method to set the width"""
 
-        if not isinstance(self.__height, int):
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
 
         if value < 0:
@@ -47,7 +47,7 @@ class Rectangle:
 
         """method to set the height"""
 
-        if not isinstance(self.__width, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
 
         if value < 0:
