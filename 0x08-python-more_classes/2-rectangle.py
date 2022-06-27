@@ -59,7 +59,9 @@ class Rectangle:
 
         """returns rectangle area"""
 
-        return self.__height * self.__width
+        area = self.__height * self.__width
+
+        return area
 
     def perimeter(self):
 
@@ -69,4 +71,6 @@ class Rectangle:
 
             return 0
 
-        return 2 * (self.__height + self.__width)
+        perimeter = 2 * (self.__height + self.__width)
+
+        return perimeter

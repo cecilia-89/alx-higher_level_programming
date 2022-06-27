@@ -77,7 +77,7 @@ class Rectangle:
 
         if self.__height == 0 or self.__width == 0:
 
-            return ''
+            return ""
 
         result = ["#" * self.__width for i in range(self.__height)]
 
