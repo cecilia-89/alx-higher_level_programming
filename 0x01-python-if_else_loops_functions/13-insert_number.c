@@ -21,13 +21,19 @@ listint_t *insert_node(listint_t **head, int number)
 
 			new->n = number;
 
-			temp->next = new;
+			if (temp == *head)
+				temp = new;
+
+			else
+				temp->next = new;
 
 			break;
 		}
 
 		temp = temp->next;
 	}
+
+	free (temp);
 
 	return (*head);
 }
