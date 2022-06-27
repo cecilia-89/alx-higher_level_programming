@@ -11,9 +11,9 @@ class Rectangle:
 
         """A class method called when an instance is created"""
 
-        self.__width = width
+        self.width = width
 
-        self.__height = height
+        self.height = height
 
     @property
     def width(self):
