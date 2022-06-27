@@ -1,0 +1,10 @@
+#!/usr/biin/python3
+
+"""Define a class Rectangle"""
+
+
+class Rectangle:
+
+    """An empty class Rectangle"""
+
+    pass
