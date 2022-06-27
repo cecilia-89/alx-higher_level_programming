@@ -20,7 +20,7 @@ class Rectangle:
 
         """method to retrieve the width"""
 
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -28,10 +28,10 @@ class Rectangle:
         """method to set the width"""
 
         if not isinstance(self.__height, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
 
         if self.__height < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
 
         self.__height = value
 
@@ -48,9 +48,9 @@ class Rectangle:
         """method to set the height"""
 
         if not isinstance(self.__width, int):
-            raise TypeError("heigth must be an integer")
+            raise TypeError("width must be an integer")
 
         if self.__width < 0:
-            raise ValueError("height must be >= 0")
+            raise ValueError("width must be >= 0")
 
         self.__width = value
