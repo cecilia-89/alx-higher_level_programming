@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+lookup: function to return all
+variables and methods
+"""
+
 def lookup(obj):
 
     """
