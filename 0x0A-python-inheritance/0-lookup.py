@@ -5,10 +5,11 @@ lookup: function to return all
 variables and methods
 """
 
+
 def lookup(obj):
 
     """
-    return a lists of all available methods 
+    return a lists of all available methods
     or attributes of a class
     """
 
