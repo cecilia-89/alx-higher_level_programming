@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+a class MyList which inherits from
+class list
+"""
+
 class MyList(list):
 
 
