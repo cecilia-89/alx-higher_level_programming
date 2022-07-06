@@ -15,4 +15,4 @@ def read_file(filename=""):
 
         read_file = f.read()
 
-    print(read_file)
+    print(read_file, end='')
