@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import json
-
 """
 to_json_string: converts a onj to json format
 """
+
+import json
 
 
 def to_json_string(my_obj):

@@ -11,6 +11,6 @@ def read_file(filename=""):
     opens and reads a file
     """
 
-    with open(filename, encoding='utf-8') as f:
+    with open(filename, 'r', encoding='utf-8') as f:
 
         read_file = f.read()
