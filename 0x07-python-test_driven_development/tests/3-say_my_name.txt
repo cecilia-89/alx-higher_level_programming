@@ -6,12 +6,12 @@
 My name is John Smith
 
 >>> say_my_name("Smith")
-My name is Smith
+My name is Smith 
 
 >>> say_my_name()
 Traceback (most recent call last):
 ...
-TypeError: add_integer() missing 1 required positional argument: 'first_name'
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 >>> say_my_name(8)
 Traceback (most recent call last):
