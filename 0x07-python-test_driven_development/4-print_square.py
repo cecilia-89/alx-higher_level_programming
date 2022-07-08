@@ -4,6 +4,7 @@ Module: 4-print_square
 Function: def print_square()
 """
 
+
 def print_square(size):
 
     if isinstance(size, float) and size < 0 or not isinstance(size, int):
