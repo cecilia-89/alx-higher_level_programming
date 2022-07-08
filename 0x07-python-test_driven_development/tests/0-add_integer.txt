@@ -35,7 +35,7 @@ TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 >>> print(add_integer(2))
 100
 
->>> print(add_interger(float("inf"))
+>>> print(add_integer(float("inf")))
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
@@ -44,3 +44,4 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
+
