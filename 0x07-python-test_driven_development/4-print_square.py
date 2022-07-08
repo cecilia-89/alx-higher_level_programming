@@ -6,6 +6,10 @@ Function: def print_square()
 
 
 def print_square(size):
+    """
+    returns a square '#' defined
+    by size
+    """
 
     if isinstance(size, float) and size < 0 or not isinstance(size, int):
         raise TypeError("size must be an integer")
