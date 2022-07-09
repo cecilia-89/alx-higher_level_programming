@@ -18,7 +18,7 @@ def text_indentation(text):
 
         text = text.replace(char, char + "\n\n")
 
-    res = [string.lstrip() for string in text.split("\n")]
+    res = [string.strip() for string in text.split("\n")]
 
     res = '\n'.join(res)
 
