@@ -9,7 +9,7 @@ class list
 class MyList(list):
 
     """
-    MyList: inherits from the 
+    MyList: inherits from the
     the class list
     """
 
