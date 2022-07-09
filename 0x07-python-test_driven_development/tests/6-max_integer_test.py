@@ -8,8 +8,10 @@ class MaxIntTest(unittest.TestCase):
         #Test when argument is a valid iterable
 
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([5, 1, 2, 3, 4]), 5)
+        self.assertEqual(max_integer([5, 1, 6, 3, 4]), 6)
+        self.assertEqual(max_integer([4]), 4)
         self.assertEqual(max_integer(), None)
-        self.assertEqual(max_integer("Hi"), 'i')
 
     def test_params(self):
         #Test when argument isn't valid
@@ -19,9 +21,3 @@ class MaxIntTest(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             max_integer(89)
-
-        with self.assertRaises(KeyError):
-            max_integer({'key':6, 'we':'cat'})
-
-
-
