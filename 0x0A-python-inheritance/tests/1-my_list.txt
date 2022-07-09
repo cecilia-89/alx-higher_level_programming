@@ -9,3 +9,12 @@
 >>> lst.print_sorted()
 [1, 2, 3]
 
+>>> lst_2 = MyList()
+>>> lst_2.print_sorted()
+[]
+>>> lst_4 = MyList()
+>>> lst_4.append(1)
+>>> lst_4.append(-2)
+>>> lst_4.append(3)
+>>> lst_4.print_sorted()
+[-2, 1, 3]
