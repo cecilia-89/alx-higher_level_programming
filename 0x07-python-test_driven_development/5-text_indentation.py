@@ -22,4 +22,4 @@ def text_indentation(text):
 
     res = '\n'.join(res)
 
-    print(res)
+    print(res, end='')
