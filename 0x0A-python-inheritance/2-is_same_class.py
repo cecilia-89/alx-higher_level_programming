@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-is_same_class: returns true if 
+is_same_class: returns true if
 an object belongs to a particular class
 else returns false
 """
