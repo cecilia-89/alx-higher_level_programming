@@ -6,6 +6,7 @@ an object belongs to a particular class
 else returns false
 """
 
+
 def is_same_class(obj, a_class):
 
     """
