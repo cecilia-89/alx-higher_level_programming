@@ -14,15 +14,12 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    symbols = ['.', ':', '?']
+    for char in ":?.":
 
-    for count, char in enumerate(text):
+        text = text.replace(char, char + "\n\n")
 
-        res = char in symbols
+    res = [string.lstrip() for string in text.split("\n")]
 
-        if char == " " and text[count-1] in symbols:
-            continue
+    res = '\n'.join(res)
 
-        print(char, end="" if not res else "\n")
-
-    print()
+    print(res)
