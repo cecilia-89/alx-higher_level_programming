@@ -21,3 +21,5 @@ def max_integer(list=[]):
             i += 1
 
     return result
+
+print(max_integer([-5, -1, -6]))
