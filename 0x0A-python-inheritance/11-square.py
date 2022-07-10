@@ -13,6 +13,8 @@ class Square(Rectangle):
     """
 
     def __init__(self, size):
+        """instantiates a new instance of
+        class Square"""
 
         super().integer_validator("size", size)
 
@@ -21,5 +23,7 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def __str__(self):
+        """overrides string represantation of class
+        Rectangle"""
 
         return "[Square] " + str(self.__size) + '/' + str(self.__size)

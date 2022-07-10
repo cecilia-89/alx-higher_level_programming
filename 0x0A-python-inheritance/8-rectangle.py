@@ -8,8 +8,14 @@ BaseGeometry
 
 
 class Rectangle(BaseGeometry):
+    """
+    class: Rectangle that inherits from
+    BaseGeometry
+    """
 
     def __init__(self, width, height):
+        """instantiates an instance
+        of class Rectangle"""
 
         super().integer_validator("width", width)
 
