@@ -2,7 +2,8 @@
 Rectangle = __import__('9-rectangle').Rectangle
 
 """
-Module: 10-square
+Module: 11-square which defines a class 
+Sqaure that inherits from Rectangle
 """
 
 
