@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
 """
 Module: 8-rectangle which defines
-a class Rectangle
+a class Rectanglie
 """
 
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
