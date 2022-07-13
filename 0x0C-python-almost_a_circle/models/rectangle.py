@@ -128,4 +128,14 @@ class Rectangle(Base):
         """returns the dict representation
         of a class
         """
-        return self.__dict__
+        new_dict = {}
+
+        for k, v in self.__dict__.items():
+           lst = k.split('__')
+
+           if not len(lst) > 1:
+               new_dict[lst[0]] = v
+           else:
+               new_dict[lst[1]] = v
+
+        return new_dict
