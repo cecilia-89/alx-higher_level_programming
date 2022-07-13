@@ -129,13 +129,13 @@ class Rectangle(Base):
         of a class
         """
         new_dict = {}
-
         for k, v in self.__dict__.items():
-           lst = k.split('__')
+            lst = k.split('__')
 
-           if not len(lst) > 1:
-               new_dict[lst[0]] = v
-           else:
-               new_dict[lst[1]] = v
+            if not len(lst) > 1:
+                new_dict[lst[0]] = v
+
+            else:
+                new_dict[lst[1]] = v
 
         return new_dict
