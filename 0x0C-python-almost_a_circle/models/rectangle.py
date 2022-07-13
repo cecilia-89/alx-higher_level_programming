@@ -11,6 +11,8 @@ class Rectangle(Base):
     inherits from 'Base'"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """instantiates new instances of a class
+        """
 
         super().__init__(id)
         self.__width = width
@@ -123,5 +125,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-
+        """returns the dict representation
+        of a class
+        """
         return self.__dict_i_
