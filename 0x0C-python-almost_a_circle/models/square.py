@@ -54,7 +54,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-
-        del self.__dict__['width']
+        """returns dict representation of
+        a dict"""
 
         return self.__dict__
