@@ -128,4 +128,4 @@ class Rectangle(Base):
         """returns the dict representation
         of a class
         """
-        return self.__dict_i_
+        return self.__dict__
