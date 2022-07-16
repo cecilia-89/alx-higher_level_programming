@@ -70,6 +70,6 @@ class Base:
         if os.path.exists(filename):
             with open(filename, 'r') as f:
                 result = cls.from_json_string(f.read())
-                lst = [cls.create(**i) for i in result]
+            lst = [cls.create(**i) for i in result]
             return lst
-        return "[]"
+        return []
