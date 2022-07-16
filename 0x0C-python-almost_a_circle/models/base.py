@@ -86,7 +86,8 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """serializes a csv file
+        """serializes a csv file from 
+        list_objs
         """
         filename = "{}.csv".format(cls.__name__)
         with open(fname, "w") as f:
@@ -103,7 +104,8 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """deserializes a csv file
+        """deserializes a csv file into an obj 
+        instance
         """
         filename = "{}.csv".format(cls.__name__)
         if os.path.exists(filename):
