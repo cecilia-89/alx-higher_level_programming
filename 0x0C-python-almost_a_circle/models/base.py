@@ -52,6 +52,8 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """decodes json string from file
+        """
 
         if json_string:
             return json.loads(json_string)
@@ -60,6 +62,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """creates a new instance of 'cls'
+        """
         if cls.__name__ == "Rectangle":
             res = cls(5, 8)
         if cls.__name__ == "Square":
@@ -69,6 +73,9 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """loads object from a json file
+        """
+
         filename = "{}.json".format(cls.__name__)
         if os.path.exists(filename):
             with open(filename, 'r') as f:
@@ -76,3 +83,55 @@ class Base:
             lst = [cls.create(**i) for i in result]
             return lst
         return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes a csv file
+        """
+        filename = "{}.csv".format(cls.__name__)
+        with open(fname, "w") as f:
+            writer = csv.write(f)
+            if list_objs:
+                for obj in list_objs:
+                    if cls.__name__ = "Rectangle":
+                        writer.writerow([obj.id, obj.width,
+                                        obj.height, obj.x, obj.y])
+                    if cls.__name__ = "Square":
+                        writer.writerow([obj.id, obj.width, obj.x, obj.y])
+            else:
+                f.write("[]")
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes a csv file
+        """
+        filename = "{}.csv".format(cls.__name__)
+        if os.path.exists(filename):
+            with open(filename, 'r') as f:
+                rows = csv.DictReader(file)
+                for row in rows:
+                    d = {key: int(value) for key, value in row.items()}
+                    list_instance.append(cls.create(**d))
+            return list_instance
+        return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draws a shape
+        """
+        for i in list_rectangles + list_squares:
+
+            tur = turtle.Turtle()
+            tur.shape("turtle")
+            turtle.bgcolor("black")
+            tur.fillcolor("white")
+            tur.begin_fill()
+            tur.pen(fillcolor="white", pencolor="red", pensize=2)
+            for i in range(2):
+                tur.forward(i.width)
+                tur.right(90)
+                tur.forward(i.height)
+                tur.right(90)
+
+            tur.end_fill()
+            turtle.done()
