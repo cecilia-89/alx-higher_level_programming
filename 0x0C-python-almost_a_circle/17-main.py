@@ -4,7 +4,7 @@ from models.square import Square
 
 if __name__ == "__main__":
 
-    r1 = Square(3, 5, 1)
+    r1 = Square(2)
     r1_dictionary = r1.to_dictionary()
     r2 = Square.create(**r1_dictionary)
     print(r1)

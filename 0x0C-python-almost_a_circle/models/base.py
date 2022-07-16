@@ -66,10 +66,11 @@ class Base:
     @classmethod
     def load_from_file(cls):
         filename = "{}.json".format(cls.__name__)
-        if filename:
-            with open(filename, 'r') as f:
+        with open(filename, 'r') as f:
+            if f:
                 result = cls.from_json_string(f.read())
                 lst = [cls.create(**i) for i in result]
-            return lst
+
+                return lst
 
         return "[]"
