@@ -60,7 +60,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        res = cls(5, 6)
+        if cls.__name__ == "Rectangle":
+            res = cls(5, 8)
+        if cls.__name__ == "Square":
+            res = cls(5)
         res.update(**dictionary)
         return res
 
