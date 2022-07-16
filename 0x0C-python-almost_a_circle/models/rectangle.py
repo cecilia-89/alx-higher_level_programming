@@ -132,10 +132,6 @@ class Rectangle(Base):
         for k, v in self.__dict__.items():
             lst = k.split('__')
 
-            if not len(lst) > 1:
-                new_dict[lst[0]] = v
-
-            else:
-                new_dict[lst[1]] = v
+            new_dict[lst[-1]] = v
 
         return new_dict

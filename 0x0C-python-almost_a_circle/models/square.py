@@ -57,4 +57,10 @@ class Square(Rectangle):
         """returns dict representation of
         a dict"""
 
-        return self.__dict__
+        dic = super().to_dictionary()
+
+        dic.pop('height')
+        
+        dic['size'] = dic.pop('width')
+
+        return dic

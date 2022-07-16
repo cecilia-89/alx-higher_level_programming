@@ -3,6 +3,7 @@
 Module: base.py
 """
 
+import json
 
 class Base:
     """
@@ -22,3 +23,30 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns the json representation
+        of a dict
+        """
+        if list_dictionaries:
+            return json.dumps(list_dictionaries)
+
+        return "[]"
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """saves json representation to a file
+        """
+        dic = [obj.to_dictionary() for obj in list_objs]
+
+        with open("{}.json".format(cls.__name__), 'w+') as f:
+
+                f.write(cls.to_json_string(dic))
+
+    @staticmethod
+    def from_json_string(json_string):
+        pass
+
+
+
