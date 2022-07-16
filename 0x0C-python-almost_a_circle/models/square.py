@@ -60,7 +60,7 @@ class Square(Rectangle):
         dic = super().to_dictionary()
 
         dic.pop('height')
-        
+
         dic['size'] = dic.pop('width')
 
         return dic
