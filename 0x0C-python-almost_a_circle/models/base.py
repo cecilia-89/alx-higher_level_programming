@@ -5,6 +5,7 @@ Module: base.py
 
 import json
 
+
 class Base:
     """
     a class 'Base' with
@@ -50,7 +51,25 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        pass
 
+        if json_string:
+            return json.loads(json_string)
 
+        return []
 
+    @classmethod
+    def create(cls, **dictionary):
+        res = cls(5, 6)
+        res.update(**dictionary)
+        return res
+
+    @classmethod
+    def load_from_file(cls):
+        filename = "{}.json".format(cls.__name__)
+        if filename:
+            with open(filename, 'r') as f:
+                result = cls.from_json_string(f.read())
+                lst = [cls.create(**i) for i in result]
+            return lst
+
+        return "[]"
