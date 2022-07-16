@@ -117,7 +117,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """draws a shape
+        """draws a shape of rect & square
         """
         for i in list_rectangles + list_squares:
 
