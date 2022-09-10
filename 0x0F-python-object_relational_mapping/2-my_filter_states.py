@@ -13,6 +13,7 @@ if __name__ == '__main__':
                 ORDER BY states.id ASC".format(sys.argv[4]))
     queries = cur.fetchall()
     for query in queries:
-        print(query)
+        if (query[1] == sys.argv[4]):
+            print(query)
     cur.close()
     db.close()
