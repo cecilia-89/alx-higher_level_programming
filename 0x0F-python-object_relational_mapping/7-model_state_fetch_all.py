@@ -12,7 +12,6 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(bind=engine)
-    queries = session.query(State).all()
-    for count, query in enumerate(queries):
-        print(f"{count + 1}: {query.name}")
+    for query in session.query(State).all().order_by(State.id):
+        print(f"{query.id}: {query.name}")
     session.close()
