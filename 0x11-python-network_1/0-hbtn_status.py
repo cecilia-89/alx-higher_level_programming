@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-from urllib import request
 """
 Module: 0-hbtn_status.py
 """
+
+from urllib import request
+
 
 if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
