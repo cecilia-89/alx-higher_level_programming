@@ -9,6 +9,7 @@ from urllib import request
 if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
     with request.urlopen(url) as r:
-        print(f"Body response:\n\t- type:{r.peek().__class__}\
-              \n\t- content: {r.read()}\
-              \n\t- utf8 content: {r.reason}".expandtabs(4))
+        data = r.read()
+        print(f"Body response:\n\t- type:{data.__class__}\
+              \n\t- content: {data}\
+              \n\t- utf8 content: {data.decode('utf-8')}".expandtabs(4))
