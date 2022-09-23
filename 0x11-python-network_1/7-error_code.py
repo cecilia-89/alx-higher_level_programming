@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """
 Module: 7-error_code.py
 """
+import requests
+from sys import argv
 
 if __name__ == "__main__":
 
