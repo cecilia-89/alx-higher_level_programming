@@ -9,7 +9,7 @@ if __name__ == "__main__":
     try:
         with request.urlopen(argv[1]) as resp:
             data = resp.read()
-            print(data.encode('utf-8'))
-    except urllib.error.HTTPError as err:
+            print(data.decode('utf-8'))
+    except error.HTTPError as err:
         print(f"Error code: {err.code}")
 
