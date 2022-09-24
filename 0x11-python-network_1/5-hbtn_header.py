@@ -10,4 +10,4 @@ if __name__ == "__main__":
     try:
         print(r.headers["X-Request-Id"])
     except KeyError as err:
-        print()
+        print("None")
