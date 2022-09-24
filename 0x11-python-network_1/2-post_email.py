@@ -12,4 +12,6 @@ if __name__ == "__main__":
     url = f"{argv[1]}?{query_string}"
     with request.urlopen(url) as resp:
         data = resp.read()
-        print(data.decode('utf-8'))
+        print(dir(data))
+        print(data.translate())
+        #print(data.decode('utf-8'))
