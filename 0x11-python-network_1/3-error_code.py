@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 2-post_email.py
+Module: 3-error_code.py
 """
 from urllib import request, error
 from sys import argv
