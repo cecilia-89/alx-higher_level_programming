@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Module: 2-post_email.py """
+"""
+Module: 2-post_email.py
+"""
 
 from urllib import request, parse
 from sys import argv
