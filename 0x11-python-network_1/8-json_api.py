@@ -19,5 +19,5 @@ if __name__ == "__main__":
             print("No result")
         else:
             print(f"[{js.get('id')}]", js.get('name'))
-    except:
+    except ValueError:
         print("Not a valid JSON")
