@@ -10,9 +10,6 @@ if __name__ == "__main__":
     r = requests.get("https://api.github.com/repos/"
                      f"{argv[2]}/{argv[1]}/commits")
     js = r.json()
-    length = len(js)
-    if length > 10:
-        length = 10
-    for i in range(length):
-        author = js[i].get('commit').get('author')
-        print(js[i].get('sha') + ':', author.get('name'))
+    for commit in js[:10]:
+        author = commit.get('commit').get('author').get('name')
+        print(commit.get('sha') + ':', author)
