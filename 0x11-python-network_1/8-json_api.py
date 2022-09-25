@@ -7,15 +7,16 @@ Module: 7-error_code.py
 
 if __name__ == "__main__":
 
-    if len(argv) == 1:
-        value = ""
-    else:
+    value = ""
+    if len(argv) > 1:
         value = argv[1]
     data = {'q': value}
-    r = requests.get("https://google.com/search", params=data)
-    if 'application/json' in r.headers['Content-Type']:
-        print('yes')
-    else:
-        print('no')
-
-
+    r = requests.post("http://0.0.0.0:5000/search_user", data=data)
+    try:
+        js = r.json()
+        if js.__len__() == 0:
+            print("No result")
+        else:
+            print(f"[{js.get('id')}]", js.get('name'))
+    except:
+        print("Not a valid JSON") 

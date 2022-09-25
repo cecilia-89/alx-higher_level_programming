@@ -9,9 +9,7 @@ from sys import argv
 if __name__ == "__main__":
     param = {'email': argv[2]}
     query_string = parse.urlencode(param)
-    url = f"{argv[1]}?{query_string}"
-    with request.urlopen(url) as resp:
-        data = resp.read()
-        print(dir(data))
-        print(data.translate())
-        #print(data.decode('utf-8'))
+    data = query_string.encode("ascii")
+    with request.urlopen(argv[1], data) as r:
+        data = r.read()
+        print(data.decode())
