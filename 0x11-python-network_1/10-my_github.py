@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """
 Module: 10-my_github.py
 """
+import requests
+from sys import argv
+
 pat = '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'
 if __name__ == "__main__":
 

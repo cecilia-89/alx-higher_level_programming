@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""
+Module: 8-json_api.py
+"""
 import requests
 from sys import argv
-"""
-Module: 7-error_code.py
-"""
+
 
 if __name__ == "__main__":
 
@@ -19,4 +20,4 @@ if __name__ == "__main__":
         else:
             print(f"[{js.get('id')}]", js.get('name'))
     except:
-        print("Not a valid JSON") 
+        print("Not a valid JSON")
