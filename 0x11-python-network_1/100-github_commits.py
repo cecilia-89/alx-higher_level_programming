@@ -7,8 +7,12 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    r = requests.get(f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits",)
+    r = requests.get("https://api.github.com/repos/"
+                     f"{argv[2]}/{argv[1]}/commits")
     js = r.json()
-    for i in range(10):
+    length = len(js)
+    if length > 10:
+        length = 10
+    for i in range(length):
         author = js[i].get('commit').get('author')
-        print(js[i].get('sha') + ':', author.get('name') )
+        print(js[i].get('sha') + ':', author.get('name'))
