@@ -6,7 +6,11 @@ request.get(process.argv[2], (error, response, body) => {
   if (!error) {
     const episodes = JSON.parse(body).results;
     episodes.forEach(episode => {
-      console.log(episode.charcters)
+      episode.characters.forEach(char => {
+        if (char.endsWith('/18/')) {
+          count++;
+        }
+      });
     });
   }
 
