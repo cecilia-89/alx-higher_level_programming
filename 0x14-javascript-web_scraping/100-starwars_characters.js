@@ -7,7 +7,7 @@ request.get(url, (error, response, body) => {
   }
 
   JSON.parse(body).characters.forEach(character => {
-    request.get(character, (err, res, body) => {
+    request(character, (err, res, body) => {
       if (!err) {
         console.log(JSON.parse(body).name);
       }
