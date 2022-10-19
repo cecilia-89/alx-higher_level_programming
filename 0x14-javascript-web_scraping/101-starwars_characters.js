@@ -6,21 +6,18 @@ request.get(url, (error, response, body) => {
   if (error) {
     console.log(error);
   }
-  const ep = JSON.parse(body)
-  displayChar(ep.characters, 0)
-
+  const ep = JSON.parse(body);
+  displayChar(ep.characters, 0);
 });
 
-function displayChar(chars, count) {
+function displayChar (chars, count) {
   request.get(chars[count], (err, res, body) => {
     if (!err) {
       console.log(JSON.parse(body).name);
 
-      if (count++ < chars.length){
-        displayChar(chars, count)
+      if (count++ < chars.length) {
+        displayChar(chars, count);
       }
     }
-
-  })
-
+  });
 }
