@@ -6,14 +6,21 @@ request.get(url, (error, response, body) => {
   if (error) {
     console.log(error);
   }
-
-
-  for (const i in JSON.parse(body).characters) {
-    request.get(JSON.parse(body).characters[i], (err, res, body) => {
-      if (!err) {
-        console.log(JSON.parse(body).name);
-      }
-    });
-  }
+  const ep = JSON.parse(body)
+  displayChar(ep.characters, 0)
 
 });
+
+function displayChar(chars, count) {
+  request.get(chars[count], (err, res, body) => {
+    if (!err) {
+      console.log(JSON.parse(body).name);
+
+      if (count++ < chars.length){
+        displayChar(chars, count)
+      }
+    }
+
+  })
+
+}
